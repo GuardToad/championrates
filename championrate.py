@@ -4,7 +4,7 @@ import requests
 
 def main():
     all_champs = {}
-    data = requests.get("https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-champion-statistics/global/default/rcp-fe-lol-champion-statistics.js")
+    data = requests.get("https://raw.githubusercontent.com/GuardToad/championrates/main/latest/plugins/rcp-fe-lol-champion-statistics/global/default/rcp-fe-lol-champion-statistics.js")
     matches = re.findall('.exports=({.*)},', data.text)
     if len(matches) > 0:
         match = matches[0]
